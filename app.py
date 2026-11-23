@@ -8,11 +8,29 @@ def mostrar_menu():
     print("4. Eliminar tarea")
     print("5. Salir")
 
+def agregar_tarea():
+    titulo = input("Ingrese el titulo de la tarea: ")
+    tareas.append({"titulo": titulo, "completada": False})
+    print("Tarea agregada con exito.")
+
+def listar_tareas():
+    if not tareas:
+        print("No hay tareas registradas.")
+        return
+    for i, t in enumerate(tareas,1):
+        estado = "✔" if t["completada"] else "✘"
+        print(f"{i}. [{estado}] {t['titulo']}")
+
+
 def main():
     while True:
         mostrar_menu()
         opcion = input("Seleccione una opción: ")
-        if opcion == "5":
+        if opcion == "1":
+            agregar_tarea()
+        elif opcion == "2":
+            listar_tareas()
+        elif opcion == "5":
             print("Saliendo del gestor...")
             break
         else:
