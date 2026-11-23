@@ -10,7 +10,10 @@ def mostrar_menu():
     print("5. Salir")
 
 def agregar_tarea():
-    titulo = input("Ingrese el titulo de la tarea: ")
+    titulo = input("Ingrese el titulo de la tarea: ").strip()
+    if not titulo:
+        print("Error: El titulo de la tarea no puede estar vacio.")
+        return
     tareas.append({"titulo": titulo, "completada": False})
     print("Tarea agregada con exito.")
 
