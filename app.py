@@ -1,7 +1,8 @@
 tareas = []
 
 def mostrar_menu():
-    print("\n--- GESTOR DE TAREAS CLI ---")
+    print("\n=== GESTOR DE TAREAS CLI v1.0 ===")
+    print("Ayuda: Ingrese el numero de la accion deseada.")
     print("1. Agregar tarea")
     print("2. Listar tareas")
     print("3. Completar tarea")
